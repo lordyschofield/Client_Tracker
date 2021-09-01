@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LeadsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home/{user}', [HomeController::class, 'index'])->name('home');
+Route::get('/logout', [LogoutController::class,'store'])->name('logout');
+Route::get('/leads', [LeadsController::class, 'index'])->name('leads');
+
+
 
 Auth::routes();
 
-Route::get('/home/{user}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
