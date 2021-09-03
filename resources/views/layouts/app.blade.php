@@ -22,17 +22,10 @@
     
 <body class="bg-gray-300">
     <div id="app">
-        <nav class="p-6 bg-white flex justify-between" >
-            <img src="/img/logo.png" style="max-width:70px" class="">
+        <nav class="p-6 bg-gray-500 flex justify-between" >
+            
             @auth
-                
-            <ul class="flex items-center">
-                
-                    <div class="flex items-center pl-3">
-                        
-                          Welcome {{ auth()->user()->name }}
-                    </div>      
-                    
+               
                 <li class="p-3">
                     <a href="">Home</a>
                 </li>
@@ -84,26 +77,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            
-                        
-                        @endguest
-                    </ul>
+                    
                 </div>
             </div>
         </nav>
