@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 Route::get('/home/{user}', [HomeController::class, 'index'])->name('home');
 Route::get('/logout', [LogoutController::class,'store'])->name('logout');
-Route::get('/leads', [LeadsController::class, 'index'])->name('leads');
+Route::get('/leads/{user}', [LeadsController::class, 'index'])->name('leads');
 
 
 

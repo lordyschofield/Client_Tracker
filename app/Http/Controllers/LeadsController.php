@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class LeadsController extends Controller
 {
@@ -18,11 +19,16 @@ class LeadsController extends Controller
 
 
 
-    public function index(){
+    public function index($user){
 
 
+        $user  = User::find($user);
 
-        return view('leads');
+
+        return view('leads',[
+            'user'=>$user
+
+        ]);
 
 
     }

@@ -17,7 +17,7 @@
             <div class="w-full mb-2">
                 <div class="flex items-center">
                     <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-user'></i>
-                    <input placeholder="Email Address" id="email" type="email" class="form-control @error('email') is-invalid @enderror -mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input placeholder="Email Address" id="email" type="email" class="form-control @error('email') is-invalid @enderror -mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" name="email" autocomplete="off" autofocus>
 
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
             <div class="w-full mb-4">
                 <div class="flex items-center">
                     <i class='ml-3 fill-current text-gray-400 text-xs z-10 fas fa-lock'></i>
-                    <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror -mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" name="password" required autocomplete="current-password">
+                    <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror -mx-6 px-8 w-full border rounded px-3 py-2 text-gray-700 focus:outline-none" name="password" autocomplete="off">
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
