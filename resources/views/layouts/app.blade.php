@@ -41,27 +41,27 @@
                     <a href="{{route('leads',$user)}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
                       Leads
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    <a href="{{route('contacts',$user)}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
                       Contacts
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    <a href="{{route('accounts',$user)}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
                       Accounts
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    <a href="{{route('deals',$user)}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
                       Deals
                     </a>
-                    <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
+                    <a href="{{route('activities',$user)}}" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4">
                       Activities
                     </a>
                   </div>
 
                   <div>
-                    <h1 class="mr-3 text-lg text-gray-300">Welcome,Admin!</h1>
+                    <h1 class="mr-3 text-lg text-gray-300">Welcome , Admin!</h1>
 
                   </div>
 
                   <div>
-                    <a href="{{ route('logout') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-gray-200 mt-4 lg:mt-0">Logout</a>
+                    <a href="{{ route('logout') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-gray-400 mt-4 lg:mt-0">Logout</a>
                   </div>
                 </div>
               </nav>       
