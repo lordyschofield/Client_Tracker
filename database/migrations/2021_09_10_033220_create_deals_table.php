@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateDealsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('deals', function (Blueprint $table) {
+            $table->uuid('id')->unique();
+            $table->string('name');
+            $table->uuid('account_id');
+            $table->date('closing_date');
+            $table->string('stage');
+            $table->uuid('contact_id')->nullable();
+            $table->string('project_type');
+
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('deals');
+    }
+}
