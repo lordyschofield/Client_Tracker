@@ -13,8 +13,9 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('tasks', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id')->primary();
             $table->uuid('asignee_id');
             $table->string('subject');
             $table->string('contact_type');
@@ -23,7 +24,12 @@ class CreateTasksTable extends Migration
             $table->string('priority');
             $table->string('related_to');
             $table->uuid('related_id');
-            $table->timestamps();
+            $table->foreign('related_id')->references('id')->on('deals')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('related_id')->references('id')->on('leads')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('related_id')->references('id')->on('contacts')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('related_id')->references('id')->on('accounts')->onDelete('cascade')->onUpdate('cascade');
+
+        
         });
     }
 

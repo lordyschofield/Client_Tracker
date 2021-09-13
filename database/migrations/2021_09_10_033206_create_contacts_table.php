@@ -14,12 +14,9 @@ class CreateContactsTable extends Migration
     public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id')->primary();
             $table->uuid('account_id');
-            $table->foreign('account_id')->references('id')->on('accounts')->onUpdate('cascade')->onDelete('cascade');
             $table->string('name');
-
-
             $table->timestamps();
         });
     }

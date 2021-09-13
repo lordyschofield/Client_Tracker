@@ -14,7 +14,7 @@ class CreateLeadsTable extends Migration
     public function up()
     {
         Schema::create('leads', function (Blueprint $table) {
-        $table->uuid('id')->unique();
+        $table->uuid('id')->primary();
         $table->string('company_name');
         $table->string('contact_name');
         $table->uuid('owner_id');

@@ -14,15 +14,13 @@ class CreateDealsTable extends Migration
     public function up()
     {
         Schema::create('deals', function (Blueprint $table) {
-            $table->uuid('id')->unique();
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->uuid('account_id');
             $table->date('closing_date');
             $table->string('stage');
             $table->uuid('contact_id')->nullable();
             $table->string('project_type');
-
-
             $table->timestamps();
         });
     }
