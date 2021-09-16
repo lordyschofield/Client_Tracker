@@ -24,11 +24,8 @@ class CreateTasksTable extends Migration
             $table->string('priority');
             $table->string('related_to');
             $table->uuid('related_id');
-            $table->foreign('related_id')->references('id')->on('deals')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('related_id')->references('id')->on('leads')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('related_id')->references('id')->on('contacts')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('related_id')->references('id')->on('accounts')->onDelete('cascade')->onUpdate('cascade');
-
+            
+            
         
         });
     }

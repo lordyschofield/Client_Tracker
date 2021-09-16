@@ -11,4 +11,10 @@ class Leads extends Model
 
     protected $primaryKey = 'id';
     protected $keyType = 'string';
+
+
+
+    public function leads_task(){
+        
+    }
 }

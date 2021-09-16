@@ -16,8 +16,13 @@ class Accounts extends Model
     protected $fillable = [ 'id','company_name'
         ];
     
+    //One to Many relationship between accounts model and tasks model
+    public function accounts_tasks(){
 
-    protected $primaryKey = 'id';
-    protected $keyType = 'string';
+        return $this->hasMany(Tasks::class);
 
+
+    }
+
+    
 }

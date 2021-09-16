@@ -9,7 +9,40 @@ class Tasks extends Model
 {
     use HasFactory;
     
-    
-    protected $primaryKey = 'id';
-    protected $keyType = 'string';
+   
+    // Many to one relationship of tasks to leads
+    public function leads(){
+
+        return $this->belongsTo(Leads::class);
+
+    }
+
+
+    //Many to one relationship of tasks to accounts
+    public function accounts(){
+
+        return $this->belongsTo(Accounts::class);
+
+    }
+
+
+    //Many to one relationship of tasks to deals
+    public function deals(){
+
+        return $this->belongsTo(Accounts::class);
+
+    }
+
+
+    //Many to one relationship of tasks to contacts
+    public function contacts(){
+
+        return $this->belongsTo(Accounts::class);
+
+    }
+
+
+
+
+
 }
