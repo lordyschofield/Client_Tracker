@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class UserInfoController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,20 +16,19 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index($user)
-    {
 
-        $user  = User::paginate(10);
 
-        
-        
-        return view('home',[
+    public function index($user){
+
+
+        $user  = User::find($user);
+
+
+        return view('UserInfo',[
             'user'=>$user
+
         ]);
+
+
     }
 }

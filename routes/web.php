@@ -18,7 +18,7 @@ use App\Http\Controllers\ActivitiesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Auth::routes();
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,8 +29,8 @@ Route::get('/contacts/{user}', [ContactsController::class, 'index'])->name('cont
 Route::get('/accounts/{user}', [AccountsController::class, 'index'])->name('accounts');
 Route::get('/deals/{user}', [DealsController::class, 'index'])->name('deals');
 Route::get('/activities/{user}', [ActivitiesController::class, 'index'])->name('activities');
+Route::get('/admin/{user}/edit', [HomeController::class,'edit'])->name('admin');
 
 
-Auth::routes();
 
 

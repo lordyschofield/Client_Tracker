@@ -11,20 +11,20 @@ class Deals extends Model
     
 
     // One to many relationship between deals and tasks model
-    public function deals_tasks(){
+    public function tasks(){
         return $this->hasMany(Tasks::class);
 
     }
 
     //Many to one relationship between deals and accounts model
-    public function deals_accounts(){
+    public function accounts(){
 
     return $this->belongsTo(Accounts::class);
 
     }
 
     //Many to one relationship between deals and contacts model
-    public function deals_contacts(){
+    public function contacts(){
 
     return $this->belongsTo(Contacts::class);
 

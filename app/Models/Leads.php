@@ -9,12 +9,10 @@ class Leads extends Model
 {
     use HasFactory;
 
-    protected $primaryKey = 'id';
-    protected $keyType = 'string';
+  
+    //One to many relationship of leads model to tasks model
+    public function tasks(){
 
-
-
-    public function leads_task(){
-        
+        return $this->hasMany(Tasks::class);
     }
 }
