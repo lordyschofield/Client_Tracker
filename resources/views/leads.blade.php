@@ -18,49 +18,53 @@
           <div>
               <h2 class="text-2xl font-semibold leading-tight">Leads</h2>
           </div>
-          <div class="my-2 flex sm:flex-row flex-col">
-              <div class="flex flex-row mb-1 sm:mb-0">
-                  <div class="relative">
-                      <select
-                          class="appearance-none h-full rounded-l border block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                          <option>5</option>
-                          <option>10</option>
-                          <option>20</option>
-                      </select>
-                      <div
-                          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                          </svg>
-                      </div>
-                  </div>
-                  <div class="relative">
-                      <select
-                          class="appearance-none h-full rounded-r border-t sm:rounded-r-none sm:border-r-0 border-r border-b block appearance-none w-full bg-white border-gray-400 text-gray-700 py-2 px-4 pr-8 leading-tight focus:outline-none focus:border-l focus:border-r focus:bg-white focus:border-gray-500">
-                          <option>All</option>
-                          <option>Active</option>
-                          <option>Inactive</option>
-                      </select>
-                      <div
-                          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                          <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                          </svg>
-                      </div>
-                  </div>
-              </div>
-              <div class="block relative">
-                  <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
-                      <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
-                          <path
-                              d="M10 4a6 6 0 100 12 6 6 0 000-12zm-8 6a8 8 0 1114.32 4.906l5.387 5.387a1 1 0 01-1.414 1.414l-5.387-5.387A8 8 0 012 10z">
-                          </path>
-                      </svg>
-                  </span>
-                  <input placeholder="Search"
-                      class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
-              </div>
-          </div>
+          
+            
+          <div class="flex items-center mt-2">
+            <div class="flex border-2 rounded">
+                <input type="text" class="px-4 py-2 w-80" placeholder="Search...">
+                <button class="flex items-center justify-center px-4 border-l">
+                    <svg class="w-6 h-6 text-gray-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                    </svg>
+                </button>
+                
+            </div>
+            <button class="relative ml-80 bg-transparent hover:bg-gray-600 text-gray-600 font-bold hover:text-white py-2 px-4 border border-gray-600 hover:border-transparent rounded">
+                Create Leads
+            </button>
+
+            <div class="p-4">
+    <div class="group relative">
+        <button class="bg-gray-800 text-white px-6 h-10 rounded">Action</button>
+        <nav tabindex="0" class="border border-2 bg-white invisible border-gray-800 rounded w-60 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
+            <ul class="py-1">
+                <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                        Edit
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                        Delete
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                        Reply
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+        </div>
+
+        
+
+
           <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
               <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                   <table class="min-w-full leading-normal">

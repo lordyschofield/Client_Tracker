@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<title>Client Tracker</title>
 
 
 @section('content')
@@ -94,8 +95,7 @@
             </body>
 
 
-            {{ $user->links() }}
-
+            
 
 
 

@@ -23,14 +23,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home/{user}', [HomeController::class, 'index'])->name('home');
-Route::get('/logout', [LogoutController::class,'store'])->name('logout');
+
 Route::get('/leads/{user}', [LeadsController::class, 'index'])->name('leads');
 Route::get('/contacts/{user}', [ContactsController::class, 'index'])->name('contacts');
 Route::get('/accounts/{user}', [AccountsController::class, 'index'])->name('accounts');
 Route::get('/deals/{user}', [DealsController::class, 'index'])->name('deals');
 Route::get('/activities/{user}', [ActivitiesController::class, 'index'])->name('activities');
-Route::get('/admin/{user}/edit', [HomeController::class,'edit'])->name('admin');
-
+Route::get('/logout', [LogoutController::class,'store'])->name('logout');
 
 
 

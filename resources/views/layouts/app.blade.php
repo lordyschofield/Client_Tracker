@@ -62,7 +62,7 @@
 
                   <div class="flex flex-wrap justify-center">
                     <div>
-                     <a href="{{route('admin',$user)}}"> <img class="rounded-full object-cover h-10 w-30 mr-2"src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg" alt="..." class="rounded-full h-25 w-25 flex items-center justify-center" />
+                     <a href=""> <img class="rounded-full object-cover h-10 w-30 mr-2"src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg" alt="..." class="rounded-full h-25 w-25 flex items-center justify-center" />
                      </a>
                     </div>
                   </div>
